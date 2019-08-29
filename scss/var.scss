@@ -1,0 +1,76 @@
+//color
+$tisco-blue 						:	rgb(9, 133, 197);
+$tisco-blue-2 						:	rgb(15, 95, 170);
+$tisco-blue-3 						:	rgb(26, 107, 171);
+$tisco-red 							:	rgb(194, 14, 26);
+$white								:	rgb(255, 255, 255);
+$black								:	rgb(0, 0, 0);
+$bg-light-blue						: 	rgb(90, 144,203);
+$bg-slight-blue						:	rgba(4,68,136,1);
+$bg-drak-blue						: 	rgb(1, 44, 95);
+$gray                               :   #d4d4d4;
+$bg-nvMobile						:	#2fceff;
+$bg-green							:	#00b2ac !default;
+
+
+
+//Viewport
+$media-width-320					: 	320px !default;
+$media-width-576					: 	576px !default;
+$media-width-768					: 	768px !default;
+$media-width-992					: 	992px !default;
+$media-width-1200					: 	1200px !default;
+
+
+//Bootstrap
+$blue								:	$tisco-blue;
+$red								:	rgb(228, 11, 25);
+$green								:   $bg-green;
+$headings-font-weight				: 	700 !default;
+
+
+//for uikit
+$offcanvas-bar-background 			:	$tisco-blue;
+$navbar-nav-item-font-size			:	inherit;
+$navbar-nav-item-font-family		:	inherit;
+$navbar-nav-item-text-transform		:	none;
+$navbar-nav-item-color				:	$tisco-blue;
+$navbar-nav-item-hover-color		:	$navbar-nav-item-color;
+$navbar-nav-item-onclick-color		:	$navbar-nav-item-color;
+$navbar-nav-item-active-color		:	$navbar-nav-item-color;
+
+$dotnav-item-background			    :   rgba($white, 0.22);
+$dotnav-item-hover-background		:   $white;      
+$dotnav-item-onclick-background		:   $white;        
+$dotnav-item-active-background		:   $white;  
+
+$button-primary-background			: 	#4397d1;     
+
+
+$close-color      					:   $black;
+$close-hover-color					:   $black;
+$dotnav-margin-horizontal			:	15px;
+$dropdown-padding					:	15px 25px!default;	
+$global-muted-color                 :   gray !default;		
+
+//For Teheme
+$image-path							:	'../img/';					
+
+//Font & size
+
+$h1-lg								:	64px;
+$h1-md								:	41px;
+$h1-sm								:	36px;
+$h2-lg								:	45px;
+$h2-md								:	25px;
+$h2-sm								:	21px;
+$f-28								:	28px;
+$f-24                               :   24px;
+$f-20                               :   20px;
+$f-18								:	18px;
+$f-17                               :   17px;
+$f-16                               :   16px;
+$f-14                               :   14px;
+$transition-time					:	.3s;
+$close-font-size                    :   1.5rem;
+

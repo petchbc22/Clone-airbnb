@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+        <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+
+        <link rel="stylesheet" href="css/bootstrap-multiselect.css" type="text/css">
+        <script type="text/javascript" src="js/bootstrap-multiselect.js"></script>
+
+
+</head>
+<body>
+<div class="container">
+<div class="example">
+    <script type="text/javascript">
+        $(document).ready(function() {
+            $('#option-droup-demo').multiselect();
+        });
+    </script>
+    <form action="">
+        <select id="option-droup-demo" multiple="multiple" required>
+            <optgroup label="Web Development">
+                <option value="jQuery" selected>
+                    <div>
+                        ddd
+                    </div>
+                    <div>aaa</div>
+                </option>
+                <option value="Bootstrap">Bootstrap</option>
+                <option value="HTML" >HTML</option>
+                <option value="CSS">CSS</option>
+                <option value="Angular">Angular</option>
+            </optgroup>
+            <optgroup label="Programming Languages">
+                <option value="Java">Java</option>
+                <option value="csharp">C#</option>
+                <option value="Python">Python</option>
+            </optgroup>
+            <optgroup label="Databases">
+                <option value="MySQL">MySQL</option>
+                <option value="Oracle">Oracle</option>
+                <option value="MSSQL">MS SQL Server</option>
+            </optgroup>  
+             
+        </select>
+        <button type="submit">send </button>    
+    </form>
+
+</div>
+
+
+</div>
+</div>
+</body>
+</html>
+

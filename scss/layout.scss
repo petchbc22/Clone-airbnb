@@ -1,0 +1,1124 @@
+@import 'var.scss';
+@import 'andy.scss';
+// font
+@font-face {
+  font-family: 'Boon SemiBold';
+  src: url('../font/Boon-SemiBold.woff2') format("woff2"), url('../font/Boon-SemiBold.woff') format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Boon';
+  src: url('../font/Boon-Regular.woff2') format("woff2"), url('../font/Boon-Regular.woff') format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+// variable color custom
+$red-be : #e40b19;
+$navy-st : #0c2d4e;
+$orange : #f05b55;
+$gray : #fdfdfd;
+$darkgray : #5f5b5b;
+$BorderColor: #cccccc !global;
+$navy-13 : #1369b0;
+$snow-gray : #868383;
+$tablet : 991px;
+$smdisplay : 767.9px;
+$mobiledisplay : 425px;
+$borderaroundtheworld : 1px solid gainsboro;
+@-webkit-keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
+@-moz-keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
+@keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
+
+@mixin resp_paddinghd {
+  @media (max-width:$tablet) {
+    padding-top: 77px;
+  }
+}
+.border-radius-20{
+  border-radius: 20px !important;
+}
+// show and not show when responsive at 425px
+.dpn-mobile-425{
+  @media (max-width:$mobiledisplay) {
+    display: none;
+  }
+}
+.show-mobile-425{
+  display: none;
+  @media (max-width:$mobiledisplay)  {
+    display:block;
+  }
+}
+.dpn-tablet{
+  @media (max-width : $smdisplay) {
+    display : none;
+  }
+}
+// custom width
+.w-5{
+  width: 5%;
+}
+.w-10{
+  width: 10%;
+}
+.w-15{
+  width: 15%;
+}
+.w-20{
+  width: 20%;
+}
+.w-25{
+  width: 25%;
+}
+.w-33{
+  width: 33.33%
+}
+.w-70{
+  width: 70%;
+}
+.w-75{
+  width: 75%;
+}
+.w-80{
+  width: 80%;
+}
+.w-85{ 
+  width: 85%;
+}
+
+// //////////////////////////////////////////
+// show and not show when responsive at 768px
+.dpn-mobile{
+  @media (max-width:$smdisplay) {
+    display: none;
+  }
+}
+.show-mobile{
+  display: none;
+  @media (max-width:$smdisplay)  {
+    display:block;
+  }
+}
+// //////////////////////////////////////////
+// show and not show when responsive at 768px
+.dpn-mobile-992{
+  @media (max-width:$tablet) {
+    display: none;
+  }
+}
+.show-mobile-992{
+  display: none;
+  @media (max-width:$tablet)  {
+    display:block;
+  }
+}
+// //////////////////////////////////////////
+// responsive border bottom when mobile md 
+.resp-bd-bt{
+  @media (max-width : $tablet) {
+    padding-bottom : 20px;
+    border-bottom : 1px solid gainsboro;
+  }
+}
+
+.custom-a{
+  a{
+    text-decoration: none !important;
+    &:visited { text-decoration: none; color:navy; }
+  }
+  img{
+    height: 300px;
+    object-fit: cover;
+  }
+}
+
+.boon-fonts-regular{
+  font-family: 'Boon' !important;
+}
+.boon-fonts-bold{
+  font-family: 'Boon SemiBold'!important;
+}
+// font
+.f-12{
+  font-size: 12px;
+}
+.f-14 {
+  font-size: 14px;
+}
+.f-15{
+  font-size: 15px;
+}
+.f-16{
+  font-size: 16px;
+}
+.f-17{
+  font-size: 17px;
+}
+.f-18{
+  font-size: 18px !important;
+}
+.f-19{
+  font-size: 19px;
+}
+.f-20{
+  font-size: 20px;
+}
+.f-22{
+  font-size: 22px;
+}
+.f-24{
+  font-size: 24px;
+}
+.f-28{
+  font-size: 28px;
+}
+.color-snowgray{
+  color: $snow-gray!important;
+}
+.color-gray{
+  color : $darkgray !important;
+}
+.color-blue{
+  color:$navy-13 !important;
+}
+.fade-in {
+  opacity:0;  /* make things invisible upon start */
+  -webkit-animation:fadeIn ease-in 1;  /* call our keyframe named fadeIn, use animattion ease-in and repeat it only 1 time */
+  -moz-animation:fadeIn ease-in 1;
+  animation:fadeIn ease-in 1;
+
+  -webkit-animation-fill-mode:forwards;  /* this makes sure that after animation is done we remain at the last keyframe value (opacity: 1)*/
+  -moz-animation-fill-mode:forwards;
+  animation-fill-mode:forwards;
+
+  -webkit-animation-duration:1s;
+  -moz-animation-duration:1s;
+  animation-duration:1s;
+}
+.hero-image {
+  background-image: url("../img/0ffd8594-f123-43f0-85bb-7ef88c6f0624.jpg"); /* The image used */
+  background-color: #cccccc; /* Used if the image is unavailable */
+  height: 100vh; /* You must set a specified height */
+  background-position: center; /* Center the image */
+  background-repeat: no-repeat; /* Do not repeat the image */
+  background-size: cover; 
+  margin-top: -27px;
+}
+.vh-100{
+  height: 100vh;
+}
+.bg-frist{
+  height: 100vh;
+  @media (max-width:$tablet) {
+    height: 255px;
+    object-fit: cover;
+  }
+}
+.box-search-desktop {
+  background-color: white;
+  width: 435px;
+  padding: 30px;
+  border-radius: 5px;
+  @media (max-width:$tablet){
+    display: none;
+  }
+}
+.title-search-mobile  {
+  display: none;
+  @media (max-width:$tablet) {
+    display: block;
+  }
+}
+.box-search-mobile {
+  display: none;
+  @media (max-width:$tablet) {
+    display: block;
+  }
+}
+
+.textmenu{
+  font-size: 14px !important;
+  font-weight: bold;
+}
+.uk-navbar-right{
+  @media (max-width:$tablet) {
+    display: none;
+  }
+}
+// Navigation Variables
+$content-width: 1000px;
+$breakpoint: 799px;
+$nav-height: 70px;
+$nav-background: #262626;
+$nav-font-color: #ffffff;
+$link-hover-color: #2581DC;
+
+// Outer navigation wrapper
+.navigation {
+  height: $nav-height;
+
+}
+
+// Logo and branding
+.brand {
+  position: absolute;
+  padding-left: 20px;
+  float: left;
+  line-height: $nav-height;
+  text-transform: uppercase;
+  font-size: 1.4em;
+  a,
+  a:visited {
+    color: $nav-font-color;
+    text-decoration: none;
+  }
+}
+
+// Container with no padding for navbar
+.nav-container {
+  max-width: $content-width;
+  margin: 0 auto;
+}
+
+
+
+// Dropdown list binds to JS toggle event
+.nav-dropdown {
+  position: absolute;
+  display: none;
+  z-index: 1;
+  box-shadow: 0 3px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* Mobile navigation */
+
+// Binds to JS Toggle
+.nav-mobile {
+  display: none;
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: $nav-height;
+  width: 80px;
+}
+@media (max-width: $tablet) {
+  // Hamburger nav visible on mobile only
+  .nav-mobile {
+    display: block;
+  }
+  nav {
+   width: 100%;
+    padding: $nav-height 0 15px;
+    ul {
+      display: none;
+      li {
+        float: none;
+        a {
+          padding: 15px;
+          line-height: 20px;
+        }
+        ul li a {
+          padding-left: 30px;
+        }
+      }
+    }
+  }
+  .nav-dropdown {
+    position: static;
+  }
+}
+@media screen and (min-width: $breakpoint) {
+  .nav-list {
+    display: block !important;
+  }
+}
+#nav-toggle {
+  position: absolute;
+  left: 18px;
+  top: 19px;
+  cursor: pointer;
+}
+.error {
+  color: #ffa700;
+}
+.cursor{
+  cursor: pointer;
+}
+// Page content 
+article {
+  max-width: $content-width;
+  margin: 0 auto;
+  padding: 10px;
+}
+.border-g{
+border : 1px solid #e5e5e5 !important;
+}
+// for textbox
+.h-46{
+  height: 46px;
+}
+.h-57{
+  height: 57px;
+}
+#datepicker{
+  height:38px;
+}
+.bg-white{
+  background-color: white;
+  transition: .3s;
+}
+.bg-black{
+  background-color : black;
+}
+.bg-blue{
+  background-color: $navy-13;
+}
+.bg-gray{
+  background-color: #f1f1f1;
+}
+.text-black{
+  color: black !important;
+}
+.text-green{
+  color: green;
+}
+.text-orange{
+  color :orange;
+}
+#slideshow {
+  
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    @media (max-width:$tablet){
+      height: 270px;
+    }
+  }
+  
+  #slideshow > div {
+    position: absolute;
+  
+    left: 0;
+    right: 0;
+   
+  }
+  .img-hero{
+    width:100%;
+    height:100vh;
+    object-fit: cover;
+    @media (max-width:$tablet){
+      height: 270px;
+    }
+  }
+  .img-hero-slide{
+    width:100%;
+    height:240px;
+    object-fit: cover;
+  }
+  .img-hero-banner{
+    object-fit: cover;
+    height: 250px;
+    width: 100%;
+  }
+  .navbar-custom{
+    background-color:transparent;position: fixed;z-index: 500;width: 100%;
+    @media (max-width:$tablet) {
+      background-color:rgba(0, 0, 0, 0.8);
+    }
+  }
+  .layout-nav{
+    height: 80px;
+    @media (max-width:$tablet) {
+      height: auto;
+    }
+  }
+  // box-shadow
+  .box-sd-nb{
+    box-shadow: rgba(0,0,0,0.2) 0 0 5px !important;
+  }
+  .box-sd{
+    box-shadow: 0px 0px 61px -19px rgba(0,0,0,0.97);
+  }
+  // borderbottom
+  .bd-bt{
+    border-bottom: 1px solid gainsboro;
+  }
+  .bd-t{
+    border-top: 1px solid gainsboro;
+  }
+  .search-dpn{
+    display: none;
+
+  }
+  .search-dpn.scrolled{
+    display: block;
+    transition: background-color 200ms linear;
+  }
+  .navbar-custom.scrolled {
+    background-color: #fff !important;
+    transition: background-color 200ms linear;
+    box-shadow: 0 5px 10px 0 rgba(0,0,0,.1);
+  }
+  .custom-font-scroll.scrolled{
+    color:black !important;
+  }
+  .color-white{
+    color:white;
+  }
+  .custom-icons.scrolled{
+    color:black !important;
+  }
+  .box-slide{
+    border: 1px solid gainsboro;
+    box-shadow: 1px 1px 10px -8px rgba(0,0,0,.51);
+    min-width: 250px;
+    padding: 0 ;
+    @media (max-width:575px) {
+      min-width: 150px;
+     
+    }
+    img{
+      width: 100px;
+      height:100px;
+      @media (max-width:575px) {
+        width: 150px;
+     
+      }
+    }
+    p{
+      @media (max-width:576px) {
+        text-align: center;
+      }
+    }
+  }
+  .button-slide-custom{
+    background-color: white;
+    color:black !important;
+    padding: 10px 15px !important;
+    border-radius: 50%;
+  }
+.desktop-menu-list{
+  @media (max-width:$tablet) {
+    display:none;
+  }
+}
+.mobile-menu-list{
+  display: none;
+  @media (max-width:$tablet) {
+    display:block;
+    height: 500px;
+    overflow: auto;
+    padding-bottom: 20px;
+  }
+}
+// border-bottom
+.bd-bt{
+  border-bottom: 1px solid gainsboro;
+}
+.add-percent-opacity{
+  background-color: rgba(0,0,0,.8);
+}
+.btn-see-dt{
+  @media (max-width:$tablet) {
+    border: 2px solid darkblue;
+    padding: 10px;
+    text-align: center;
+    border-radius: 10px;
+    /* background-color: red; */
+    color: white !important; 
+  }
+}
+h2 {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-size: 15px;
+}
+
+h2:before,
+h2:after {
+    content: '';
+    border-top: 1px solid;
+    margin: 0 20px 0 0;
+    flex: 1 0 20px;
+    color : #eaeaea;
+}
+
+h2:after {
+    color : #eaeaea;
+    margin: 0 0 0 20px;
+}
+.bg-white{
+  background-color:white !important; 
+}
+
+.navbar-items{
+  // &:last-child{
+  //   margin-right: -15px;
+  // }
+  .nav-desktop &, .nav-mobile &{
+    &, &:hover, &:active{
+      a{
+        color: red !important;
+      }
+    }  
+  }
+  position: relative;
+  &::before,&::after{
+    .nav-mobile &{
+      display: none;
+    }
+    content: '';
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 3px;
+    opacity: 0;
+    left: 0;
+    @include transition($transition-time);
+    z-index: 1;
+  }
+  &::before{
+      top: 0;      
+  }
+  &::after{
+      bottom: 0;          
+  }
+  &.active, &:hover{
+    &::before,&::after{
+      opacity: 1;
+    }
+    // &::before{
+    //   background: $white;
+    // }
+    &::after{
+      background: red;
+    }
+  }
+   
+  // .nav-mobile &{
+  //   border-bottom: 1px solid gainsboro;
+  //   &.active, &:hover{
+  //     background: whiteU;
+  //   }
+  //   a{
+  //     font-size: 1.5rem;
+  //     line-height: 1.5;
+  //     padding: 10px 0;
+  //     color:white !important;
+  //   }
+  // }
+}
+// main search page
+.pt-80{
+  padding-top: 80px;
+  @include resp_paddinghd;
+}
+.pt-90{
+  padding-top: 90px;
+  @include resp_paddinghd;
+}
+.searchbar{
+  @media (max-width:$tablet ) {
+    display: none;
+  }
+}
+#main_search{
+
+  .box-slide {
+    img{
+      height: 80px !important;
+      object-fit: cover;
+    }
+  }
+ 
+  .product-plus{
+    img{
+      height: 200px;
+      object-fit: cover;
+    }
+  }
+  .pt-80{
+    @media (max-width:$tablet) {
+      padding-top: 55px;
+      text-align: center;
+    }
+  }
+}
+// deflaut page
+.maxw-1400{
+  max-width: 1400px !important;
+}
+.maxw-80pc{
+  max-width: 80% !important;
+}
+// custompage
+.maxw-90pc{
+  max-width: 95% !important;
+}
+// page detailroom
+.maxw-100pc{
+  max-width: 100% !important;
+}
+.maxw-800pc{
+  max-width: 800px !important;
+}
+// custom a tag 
+a{
+  text-decoration: none !important;
+  color: $snow-gray;
+  transition: .3s;
+  &:hover{
+    color: #1369b0;
+    transition: .3s;
+  }
+}
+.span-plus{
+  color:white;
+  background-color: #1369b0;
+  border-radius: 10%;
+  padding: 5px;
+  text-transform: uppercase ;
+
+}
+
+  .search-mobile{
+    display: none;
+    @media (max-width:$tablet) {
+      display: block;
+  
+    }
+  }
+
+.squresize{
+  width: 20px;
+  height: 20px;
+}
+// ตัดคำขึ้นบรรทัดใหม่
+.wsp-text{
+  white-space: normal;
+}
+.heading-room{
+  background-color: #f1f1f1;
+  padding: 35px;
+  @media (max-width:$tablet) {
+    background-color: transparent;
+    padding : 015px !important;
+  }
+}
+.heading-room-img{
+  @media (max-width:$tablet) {
+    padding: 0 ;
+  }
+}
+.custom-name-room{
+  white-space: normal;
+  font-size: 30px;
+  font-weight: bold;
+}
+.Reservations-bar{
+  position: fixed;
+  z-index: 50;
+  width: 100vw;
+  background-color: white;
+  bottom: 0;
+  box-shadow: 5px 5px 10px 0 rgba(0,0,0,.5);
+  padding-top:15px;
+  padding-bottom: 10px;
+}
+.container-room{
+  padding-top:50px;
+  
+  @media (max-width: $tablet) {
+    padding-top: 0;
+  }
+}
+.footer{
+  padding-bottom: 80px;
+  @media (max-width:$tablet) {
+    padding-bottom: 115px;
+  }
+ 
+}
+
+#reservations{
+  .Reservations-bar{
+    display: none;
+    @media (max-width:$tablet) {
+      display: block;
+    }
+  }
+  .footer{
+    padding-bottom: 0;
+    @media (max-width:$tablet) {
+      padding-bottom: 115px;
+    }
+   
+  }
+  .accordian-detail-rsv{
+    h3{
+      font-size: 19px;
+    }
+    ul{
+      padding-left:0;
+      padding-bottom: 20px;
+    }
+    p{
+      font-size: 16px;
+    }
+    li{
+      font-size : 16px;
+    }
+  }
+}
+.pl-37px{
+  padding-left:37px;
+}
+.box-option{
+  width: 145px;
+  height: 130px;
+  /* background-color: gainsboro; */
+  border: 1px solid gainsboro;
+  padding: 20px;
+  border-radius: 5px;
+}
+#addplace{
+  h2{
+    font-size: 22px;
+    @media (max-width : 369px) {
+      font-size: 20px;
+    }
+  }
+  label{
+    font-size: 16px;
+  }
+  figure{
+    font-size: 16px;
+    @media (max-width : 369px) {
+      font-size: 12px;
+    }
+  }
+  .img-hero-banner{
+    object-fit: cover;
+    height: 600px;
+    width: 100vw;
+  }
+  input {
+    background-color: white;
+  }
+  textarea{
+    background-color : white;
+  }
+  .footer{
+    padding-bottom: 0;
+  }
+}
+.box-search-mobile-resp{
+  width:100%;height:30px;background-color:green;padding:0;display:none;
+}
+.display-show{
+  display:block !important;
+}
+.not-click{
+  pointer-events: none;
+}
+#thankyou{
+  .footer{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    padding-bottom: 0;
+    @media (max-width:$smdisplay){
+      position: unset;
+    }
+  }
+  .box-thankyou {
+    border : 1px solid gainsboro;
+    max-width: 700px;
+    .custom{
+      font-size: 120px;
+      color: #8a0000;
+    }
+  }
+
+}
+.rm-bd{
+  -webkit-appearance: unset !important;
+}
+.oj-fit{
+  object-fit: cover;
+}
+.unstyled {
+  &::-webkit-inner-spin-button {
+    display: none;
+    -webkit-appearance: none;
+  }
+}
+.bd-aroundtw{
+  border : $borderaroundtheworld;
+}
+.box-profile{
+  // border: $borderaroundtheworld;
+  padding: 30px 0 30px 0;  
+  @media (max-width: $smdisplay) {
+    padding-bottom: 10px;
+    border-bottom: 1px solid gainsboro;
+    h1 {
+      position: relative;
+      margin-top: 20px;
+      font-size: 22px;
+      &.one {
+        margin-top: 0;
+        &:before {
+          content: "";
+          display: block;
+          border-top: solid 1px gainsboro;
+          width: 100%;
+          height: 1px;
+          position: absolute;
+          top: 50%;
+          z-index: 1;
+        }
+        span {
+          background: #fff;
+          padding: 0 20px;
+          position: relative;
+          z-index: 5;
+        }
+      }
+    }
+  }
+
+}
+.detail-profile{
+
+  @media (max-width: $smdisplay) {
+   
+  }
+  h1{
+  font-size: 35px !important;
+  }
+}
+// #profile{
+//   .footer{
+//     position : unset;
+//   }
+// }
+.pst-unset{
+  position: unset !important;
+}
+.minh-70{
+  min-height: 70vh;
+}
+.box-detail-profile{
+  border-left: 1px solid gainsboro;
+  padding : 30px 30px 30px 30px;
+  @media (max-width: $smdisplay) {
+    border-left: none;
+    // padding-left: 10px;
+  }
+}
+.img-profile{
+  border-bottom : 1px solid gainsboro;
+  @media (max-width : $smdisplay) {
+    border-bottom : none;
+  }
+}
+.img-my-estate{
+  width: 250px;
+  height: 250px;
+  object-fit: cover;
+  @media (max-width : $smdisplay) {
+    width:100%;
+  }
+}
+.contact-ico{
+  justify-content: flex-start;
+  @media (max-width: $smdisplay) {
+    justify-content: center;
+  }
+  
+}
+
+
+// h1 {
+//   position: relative;
+//   margin-top: 20px;
+//   &.one {
+//     margin-top: 0;
+//     &:before {
+//       content: "";
+//       display: block;
+//       border-top: solid 1px gainsboro;
+//       width: 100%;
+//       height: 1px;
+//       position: absolute;
+//       top: 50%;
+//       z-index: 1;
+//     }
+//     span {
+//       background: #fff;
+//       padding: 0 20px;
+//       position: relative;
+//       z-index: 5;
+//     }
+//   }
+// }
+
+.avatar-upload {
+  position: relative;
+  max-width: 205px;
+  margin: 50px auto;
+  .avatar-edit {
+    position: absolute;
+    right: 12px;
+    z-index: 1;
+    top: 10px;
+    input {
+      display: none;
+      + label {
+        display: inline-block;
+        width: 34px;
+        height: 34px;
+        margin-bottom: 0;
+        border-radius: 100%;
+        background: #FFFFFF;
+        border: 1px solid transparent;
+        box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.12);
+        cursor: pointer;
+        font-weight: normal;
+        transition: all .2s ease-in-out;
+        &:hover {
+          background: #f1f1f1;
+          border-color: #d6d6d6;
+        }
+        &:after {
+          content: "\f040";
+          font-family: 'FontAwesome';
+          color: #757575;
+          position: absolute;
+          top: 10px;
+          left: 0;
+          right: 0;
+          text-align: center;
+          margin: auto;
+        }
+      }
+    }
+  }
+  .avatar-preview {
+    width: 192px;
+    height: 192px;
+    position: relative;
+    border-radius: 100%;
+    border: 6px solid #F8F8F8;
+    box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.1);
+    > div {
+      width: 100%;
+      height: 100%;
+      border-radius: 100%;
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center;
+    }
+  }
+}
+.bgw-bdr{
+  background-color: white;
+  padding: 20px;
+  border-radius: 20px;
+}
+.resp-md-h{
+  @media (max-width:374.5px) {
+    min-height: 190px;
+  }
+}
+.dataTables_wrapper{
+  padding:10px !important;
+}
+.sidebar-wrapper{
+  overflow: hidden !important;
+}
+// img when tablet screen width 100%
+.img-resp{
+  border-radius: 50%;
+  @media (max-width:$tablet) {
+      border-radius: 0;
+      width: 100%;
+      height: 100%;
+  }
+}
+.img-hv-zoom{
+  transition: .3s;
+  border-radius: 10px;
+  &:hover{
+    transform: scale(1.05);
+    transition: .3s;
+  }
+}
+.totop{
+  position: fixed;
+  right: 20px;
+  bottom : 20px;
+  background-color: white;
+  border-radius: 50%;
+  box-shadow: 2px 2px 24px -2px rgba(179,179,179,1);
+}
+.dpn{
+  display: none;
+}
+.visible-h {
+  visibility: hidden;
+  height: 0;
+}
+.input-search{
+  width: 169px !important;
+  border-radius: 20px  !important;
+  border: 1px solid gainsboro  !important;
+  box-shadow: rgba(0,0,0,.2) 0 0 5px !important;
+}
+.search-img-404{
+  height : 200px !important;
+  width: 200px !important; 
+}
+.bd-aroundtw{
+  border : $borderaroundtheworld
+}
+#blah{
+  border: 6px solid #f8f8f8;
+  box-shadow: 0 2px 4px 0 rgba(0,0,0,.1);
+  width: 200px;
+  height: 200px;
+  @media (max-width:$smdisplay) {
+    width: 120px;
+    height:120px
+  }
+}
+.input-resp{
+  width: 80%;
+  @media (max-width:$smdisplay) {
+    width:100%;
+  }
+}
+.label-resp{
+  width: 15%;
+  @media (max-width:$smdisplay) {
+    width:100%;
+  }
+}
+.close-update-pic{
+  position: absolute;
+  right: 0px;
+  top: 3px;
+  width: 30px;
+  box-shadow: 0px 0px 35px -8px rgba(0,0,0,0.95);
+  border-radius: 50%;
+}
+#fa_home_edit{
+  .close-update-pic{
+    top:-11px!important;
+  }
+}
